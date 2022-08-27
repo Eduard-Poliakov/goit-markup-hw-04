@@ -55,6 +55,16 @@ img {
     padding-bottom: 94px;
 }
 
+.basic-header {
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
 
 body {
     font-family: 'Roboto','sans-serif';
@@ -151,6 +161,7 @@ body {
 .cont-list{
     display: flex;
     margin-left: auto;
+    
 }
 
 .cont-item + .cont-item{
@@ -158,22 +169,47 @@ body {
 }
 
 .contact-link{
+    
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     color: var(--text-color);
     padding-top: 32px;
     padding-bottom: 32px;
+
 }
 
 .contact-link:hover, .contact-link:focus{
     color: var(--accent-color);
+
+}
+
+.cont-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--text-color);
+    margin-right: 10px;
+}
+
+.contact-link:hover .cont-icon {
+    fill: var(--accent-color);
 }
 
 /* Герой */
 
-.hero{
-    background-color: var(--background-hero-footer);
+.container-hero{
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-color: #C4C4C4;
+    background-size: cover;
+    
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 }
+
 
 .hero-header{
     color: var(--text-color-secondary);
@@ -227,6 +263,22 @@ body {
       
 }
 
+.pros-container-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    background: var(--background-section-secondary);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.pros-icon{
+    width: 70px;
+    height: 70px;
+}
+
 .pros-item>h3{
     font-weight: 700;
     font-size: 14px;
@@ -254,15 +306,6 @@ body {
     flex-basis: calc((100% - 60px) / 3);
 }
 
-
-.areas-header {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-
-    margin-bottom: 50px;
-}
 
 /* Команда */
 
@@ -294,13 +337,35 @@ body {
     padding-bottom: 30px;
 }
 
-.team-header{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
+.social-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-    margin-bottom: 50px;
+.social-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+}
+
+.social-icon{
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
+}
+
+.social-link:hover,
+.social-link:focus{
+    background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon{
+    fill:var(--text-color-secondary)
 }
 
 .position-held{
@@ -309,7 +374,7 @@ body {
     line-height: 1.19;
     text-align: center;
 
-    margin: 0;
+    margin-bottom: 16px;
 }
 
 .name{
@@ -319,6 +384,41 @@ body {
     text-align: center;
 
     margin-bottom: 10px;
+}
+
+/* Кліенти */
+
+.clients-list{
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+
+.clients-link{
+    display: flex;
+    width: 168px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+}
+
+.clients-icon {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+
+
+.clients-link:hover, .clients-link:focus{
+    border: 1px solid var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+    fill: var(--accent-color);
 }
 
 /* Підвал */
@@ -334,9 +434,37 @@ body {
 
 }
 
+.footer>.container{
+    display: flex;
+}
 
 .footer address{
     margin-top: 20px;
+}
+
+.footer-social{
+    margin-left: 70px;
+    margin-top: 12px;
+}
+
+.footer strong{
+        display: block;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--text-color-secondary);
+        margin-bottom: 20px;
+}
+
+.footer-social-link{
+    
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon{
+    fill:var(--text-color-secondary)
 }
 
 .footer-item + .footer-item {
@@ -388,6 +516,18 @@ font-style: normal
 .card-item {
     flex-basis: calc((100% - 60px) / 3);
     
+}
+
+.card-link{
+
+    display: block;
+
+}
+
+.card-link:hover,
+.card-link:focus{
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .description{
